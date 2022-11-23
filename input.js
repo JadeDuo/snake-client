@@ -31,6 +31,14 @@ const handleUserInput = function(data) {
   if (data === "\033[C" || data === "d") {
     connection.write("Move: right");
   }
+  //says "I'm coming for that grub!"
+  if (data === "h") {
+    connection.write("Say: am hungry snek!");
+  }
+  //says "fite me!"
+  if (data === "f") {
+    connection.write("Say: fite me!");
+  }
 };
 
 module.exports = setupInput;
