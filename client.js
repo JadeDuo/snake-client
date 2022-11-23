@@ -15,8 +15,10 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("You're connected!");
     conn.write("Name: JD");
+    //setInterval(() => conn.write("Move: up"), 50)
   });
 
+  
   // console logs server responses for client
   conn.on("data", (data) => {
     console.log("Server says: ", data);
